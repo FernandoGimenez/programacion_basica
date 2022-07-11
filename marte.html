@@ -21,46 +21,45 @@
         var g_neptuno = 11.15;
         var g_pluton = 0.62;
         var peso_final;
+        var nombre;
         if(planeta == 1)
         {
             peso_final = peso * g_marte / g_tierra;
-            peso_final = parseFloat(peso_final).toFixed(2)
-            document.write("Tu peso en Marte es <strong>" + peso_final + " kg</strong>");
+            nombre = "Marte";
         }
         else if(planeta == 2)
         {
             peso_final = peso * g_jupiter / g_tierra;
-            peso_final = parseFloat(peso_final).toFixed(2)
-            document.write("Tu peso en Jupiter es <strong>" + peso_final + " kg</strong>");
+            nombre = "Jupiter";
         }
         else if(planeta == 3)
         {
             peso_final = peso * g_saturno / g_tierra;
-            peso_final = parseFloat(peso_final).toFixed(2)
-            document.write("Tu peso en Saturno es <strong>" + peso_final + " kg</strong>");
+            nombre = "Saturno";
         }
         else if(planeta == 4)
         {
             peso_final = peso * g_venus / g_tierra;
-            peso_final = parseFloat(peso_final).toFixed(2)
-            document.write("Tu peso en Venus es <strong>" + peso_final + " kg</strong>");
+            nombre = "Venus";
         }
         else if(planeta == 5)
         {
             peso_final = peso * g_neptuno / g_tierra;
-            peso_final = parseFloat(peso_final).toFixed(2)
-            document.write("Tu peso en Neptuno es <strong>" + peso_final + " kg</strong>");
+            nombre = "Neptuno";
         }
         else if(planeta == 6)
         {
             peso_final = peso * g_pluton / g_tierra;
-            peso_final = parseFloat(peso_final).toFixed(2)
-            document.write("Tu peso en Plutón es <strong>" + peso_final + " kg</strong>");
+            nombre = "Plutón";
         }
         else
         {
-            document.write("Hey!... el número que elegiste no está entre las opciones");
+            document.write("Hey!... el número que elegiste no está entre las opciones. ");
+            peso_final = 1000
+            nombre = "Kryptón"
         }
+        peso_final = parseFloat(peso_final).toFixed(2)
+        document.write("Tu peso en "+ nombre +" es <strong>" + peso_final + " kg</strong>");
     </script>
 </body>
 </html>
