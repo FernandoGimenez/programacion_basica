@@ -5,26 +5,50 @@ var teclas = { //esto es un objeto, es una variable que contiene más variables 
     RIGHT: 39
 };
 
-document.addEventListener("keyup", dibujarTeclado);
+document.addEventListener("keydown", dibujarTeclado);
+var cuadro = document.getElementById ("area_de_dibujo");
+var papel = cuadro.getContext("2d");
+var x = 100;
+var y = 100;
 
-function dibujarTeclado(evento)
+dibujarLinea("red", x-1, y-1, x+1, y+1, papel);
+/*como el ancho de la línea es 3, colocando esas coordenadas de inicio, genero un punto.
+Es un truco usado en videojuegos para generar bordes redondeados*/
+function dibujarLinea(color, x_i, y_i, x_f, y_f, lienzo)
 {
+    lienzo.beginPath();
+    lienzo.strokeStyle = color;
+    lienzo.lineWidth = 3; //le da el ancho a la línea, el número representa los pixeles
+    lienzo.moveTo(x_i, y_i);
+    lienzo.lineTo(x_f, y_f);
+    lienzo.stroke();
+    lienzo.closePath();
+}
+
+function dibujarTeclado(evento) //evento está para ver con console.log que ocurre por dentro de la función/
+{
+    var colorcito = "#c1afe3";
+    var movimiento = 5;
     switch(evento.keyCode)
     {
         case teclas.UP: //es importante poner los dos puntos/
-            console.log("arriba");
+        dibujarLinea(colorcito, x, y, x, y - movimiento, papel);
+        y = y - movimiento;
         break; //evita que se ejecute el resto del código/
         case teclas.DOWN:
-            console.log("abajo");
+            dibujarLinea(colorcito, x, y, x, y + movimiento, papel);
+            y = y + movimiento;
         break;
         case teclas.LEFT:
-            console.log("izquierda");
+            dibujarLinea(colorcito, x, y, x - movimiento, y, papel);
+            x = x - movimiento;
         break;
         case teclas.RIGHT:
-            console.log("derecha");
+            dibujarLinea(colorcito, x, y, x + movimiento, y, papel);
+            x = x + movimiento;
         break;
         default: //es el código que se ejecuta si no se cumple ninguno de los anteriores/
-            console.log("otra tecla")
-        break
+            console.log("otra tecla");
+        break;
     }
 }

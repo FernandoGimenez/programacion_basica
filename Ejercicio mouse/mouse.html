@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar con el mouse</title>
+    <style type="text/css">
+        body
+        {
+            background-color: grey;
+            color: white;
+            font-family: Helvetica;
+        }
+        canvas
+        {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haz tu dibujo</h1>
+    <p>Elige el color que más te guste</p>
+    <p>
+    <button style="background-color: black; border-color: white; color: white" id="black_button">Negro</button> <!--crea un botón de color-->
+    <button style="background-color: blue; border-color: white; color: white" id="blue_button">Azul</button>
+    <button style="background-color: red; border-color: white; color: white" id="red_button">Rojo</button>
+    <button style="background-color: yellow; border-color: white; color: black" id="yellow_button">Amarrillo</button>
+    <button style="background-color: green; border-color: white; color: white" id="green_button">Verde</button>
+    <button style="background-color: violet; border-color: white; color: white" id="violet_button">Violeta</button>
+    <button style="background-color: pink; border-color: white; color: black" id="pink_button">Rosado</button>
+    <button style="background-color: orange; border-color: white; color: black" id="orange_button">Naranja</button>
+    <button style="background-color: brown; border-color: white; color: white" id="brown_button">Marron</button>
+    </p>
+    <canvas style="border: 1px solid black" id="recuadro" width="900" height="300"></canvas>
+    <script src="dibujo_mouse.js"></script>
+</body>
+</html>
