@@ -31,7 +31,6 @@ var color_line = {
     BROWN: "brown",
     WHITE: "white"
 };
-console.log(color_line);
 
 function colorLinea(evento_color)
 {
@@ -39,34 +38,32 @@ function colorLinea(evento_color)
     {
         case color_boton.BLACK:
             color_line = color_line.BLACK;
-            console.log(evento_color.target.id);
-            console.log(color_line);
         break;
         case color_boton.BLUE:
-            color_line.BLUE;
+            color_line = color_line.BLUE;
         break;
         case color_boton.RED:
-            color_line.RED;
+            color_line = color_line.RED;
         break;
         case color_boton.YELLOW:
-            color_line.YELLOW;
+            color_line = color_line.YELLOW;
         break;
         case color_boton.GREEN:
-            color_line.GREEN;
+            color_line = color_line.GREEN;
         break;
         case color_boton.VIOLET:
-            color_line.VIOLET;
+            color_line = color_line.VIOLET;
         break;
         case color_boton.PINK:
-            color_line.PINK;
+            color_line = color_line.PINK;
         break;
         case color_boton.ORANGE:
-            color_line.ORANGE;
+            color_line = color_line.ORANGE;
         break;
         case color_boton.BROWN:
-            color_line.BROWN;
+            color_line = color_line.BROWN;
         break;
         default:
-            color_line.WHITE;
+            color_line = color_line.WHITE;
     }
 }

@@ -3,7 +3,7 @@ var boton = document.getElementById("botoncito");
 boton.addEventListener("click", dibujoPorClick);
 
 var d = document.getElementById("dibujito");
-var lienzo = d.getContext("2d");
+var papel = d.getContext("2d");
 var ancho = d.width;
 var color_lad = "#554D63";
 
@@ -14,12 +14,12 @@ dibujarLinea(color_lad, 299, 1, 1, 1);
 
 function dibujarLinea(color, x_i, y_i, x_f, y_f)
 {
-    lienzo.beginPath();
-    lienzo.strokeStyle = color;
-    lienzo.moveTo(x_i, y_i);
-    lienzo.lineTo(x_f, y_f);
-    lienzo.stroke();
-    lienzo.closePath();
+    papel.beginPath();
+    papel.strokeStyle = color;
+    papel.moveTo(x_i, y_i);
+    papel.lineTo(x_f, y_f);
+    papel.stroke();
+    papel.closePath();
 }
 
 function dibujoPorClick()

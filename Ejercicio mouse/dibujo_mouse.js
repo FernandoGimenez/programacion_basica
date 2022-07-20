@@ -50,7 +50,7 @@ function dibujarMouse(elemeto)
     if(elemeto.button == mouse.LEFT && elemeto.buttons == mouse.DOWN)
     {
         document.getElementById("recuadro").addEventListener("mousemove", dibujarMouse);
-        // el evento mousemove es llamado aquí para que no empiece a reslizar trazos la función hasta que se cumplan las condiciones
+        // el evento mousemove es llamado aquí para que no empiece a realizar trazos la función hasta que se cumplan las condiciones/
         dibujarLinea(color_line, x-1, y-1, x+1, y+1, area);
     }
 }
@@ -66,7 +66,7 @@ function dibujarLinea(color, x_i, y_i, x_f, y_f, lienzo)
     lienzo.closePath();
 }
 
-//código para elegir el color de la línea/
+//código para elegir el color de la línea en base al objeto color_line/
 function colorLinea(evento_color)
 {
     switch(evento_color.target.id)
@@ -102,5 +102,4 @@ function colorLinea(evento_color)
         default:
             color_line = color_line.WHITE;
     }
-    console.log(evento_color.target.id);
 }
