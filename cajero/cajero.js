@@ -10,7 +10,7 @@ class Billete
 function entregarDinero()
 {
     var t = document.getElementById("dinero");
-    dinero = parseInt(t.value); //hacemos un cast de una variable tipo string a int
+    dinero = parseInt(t.value);
     for(var bi of caja)
     {
         if(dinero > 0)
@@ -26,7 +26,6 @@ function entregarDinero()
             }
             entregado.push( new Billete(bi.valor, papeles) );
             dinero = dinero - (bi.valor * papeles);
-            // la operacion de arriba puede expresarse como: dinero -= (bi.valor * papeles)
         }
     }
     if(dinero > 0)
@@ -40,7 +39,6 @@ function entregarDinero()
             if(e.cantidad > 0)
             {
                 resultado.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
-// la operación: resultado.innerHTML = resultado.innerHTML + e.cantidad + "billet... puede expresarse como está arriba (+=)
             }
         }
     }
@@ -48,11 +46,12 @@ function entregarDinero()
 
 var caja = [];  
 var entregado = [];
-caja.push( new Billete(100, 5) );
+caja.push( new Billete(1000, 5) );
+caja.push( new Billete(500, 10) );
+caja.push( new Billete(200, 5) );
+caja.push( new Billete(100, 10) );
 caja.push( new Billete(50, 10) );
-caja.push( new Billete(20, 5) );
-caja.push( new Billete(10, 10) );
-caja.push( new Billete(5, 10) );
+caja.push( new Billete(20, 5) ); //total $12600
 
 var dinero = 0;
 var div = 0;
