@@ -1,0 +1,3 @@
+- Toma el código y ahora muestra los billetes entregados con imágenes.
+- Crear el código para ir guardando el estado de billetes del cajero y poder verlo visualmente.
+- Intenta optimizar el código que hemos escrito

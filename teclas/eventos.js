@@ -28,7 +28,7 @@ function dibujarLinea(color, x_i, y_i, x_f, y_f, lienzo)
 function dibujarTeclado(evento) //evento está para ver con console.log que ocurre por dentro de la función/
 {
     var colorcito = "#c1afe3";
-    var movimiento = 5;
+    var movimiento = 3;
     switch(evento.keyCode)
     {
         case teclas.UP: //es importante poner los dos puntos/

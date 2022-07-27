@@ -29,8 +29,8 @@ var color_line = {
 var area_de_dibujo = document.getElementById("recuadro");
 var area = area_de_dibujo.getContext("2d");
 
-document.getElementById("recuadro").addEventListener("mousedown", dibujarMouse);
-document.getElementById("recuadro").addEventListener("mouseup", dibujarMouse);
+area_de_dibujo.addEventListener("mousedown", dibujarMouse);
+area_de_dibujo.addEventListener("mouseup", dibujarMouse);
 
 document.getElementById("black_button").addEventListener("click", colorLinea);
 document.getElementById("blue_button").addEventListener("click", colorLinea);
@@ -49,7 +49,7 @@ function dibujarMouse(elemeto)
 
     if(elemeto.button == mouse.LEFT && elemeto.buttons == mouse.DOWN)
     {
-        document.getElementById("recuadro").addEventListener("mousemove", dibujarMouse);
+        area_de_dibujo.addEventListener("mousemove", dibujarMouse);
         // el evento mousemove es llamado aquí para que no empiece a realizar trazos la función hasta que se cumplan las condiciones/
         dibujarLinea(color_line, x-1, y-1, x+1, y+1, area);
     }
@@ -76,7 +76,6 @@ function colorLinea(evento_color)
         break;
         case color_boton.BLUE:
             color_line = color_line.BLUE;
-            console.log(color_line)
         break;
         case color_boton.RED:
             color_line = color_line.RED;
