@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero automático</title>
+</head>
+<body onload="ejecutarAlCargar()">
+    <h1>Banco Nación</h1>
+    <form name="form_reloj">
+        <input type="text" name="reloj" size="18" />
+    </form>
+    <p>
+        <img src="cajero.gif" />
+    </p>
+    <h3>
+        Bienvenido a Banco Nación
+    </h3>
+    <p id="menu_principal">
+        <input type="text" style="border: 0px" value="Ingrese su número de cliente:" size="25"/><br />
+        <input type="number" id="id_cliente" />
+        <input type="button" value="Aceptar" id="aceptar" />
+        <input type="button" value="Cancelar" id="cancelar" /> <hr />
+        <p id="saludo"></p>
+    </p>
+    <p id="submenu">
+        <input type="number" id="cant_dinero" /><br />
+        <input type="button" value="Extraer" id="extraer" />
+        <input type="button" value="Realizar transferencias" id="transferir" />
+        <input type="button" value="Efectivo disponible en Cajero" id="saldo" />
+        <input type="button" value="Salir" id="salir" />
+    </p>
+    <p id="menu_transferir">
+        <input type="text" style="border: 0px" value="Ingresa el monto a tranferir" size="20"/>
+        <input type="number" id="dinero_transferir" /><br />
+        <input type="text" style="border: 0px" value="Ingresa el destinatario" size="16" />
+        <input type="number" id="id_destinatario" /><br />
+        <input type="button" value="Consultá tu saldo" id="saldo_usuario" />
+        <input type="button" value="Transferir" id="transferencia" />
+        <input type="button" value="Cancelar" id="cancelar_transferencia" />
+    </p>
+    <script src="extracciones.js"></script>
+    <script src="condiciones.js"></script>
+</body>
+</html>
