@@ -251,9 +251,6 @@ function tranferir()
         }
     }
 
-    console.log(saldo_cliente);
-    console.log(banco_cliente);
-    console.log(banco_destino);
 }
 let saldo_final_cliente = 0;
 let saldo_final_destino = 0;
